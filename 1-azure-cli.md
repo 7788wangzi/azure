@@ -23,7 +23,7 @@ brew update && brew install azure-cli
 
 在Linux上的安装步骤取决于Linux的发行版本，具体指引请参考[这里](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest).
 
-**安装在WSL（on Windows 10)
+**安装在WSL（on Windows 10)**
 
 首先，安装WSL，以ubuntu18.04为例，在命令行工具(command prompt)中, 从微软商店下载ubuntu-1804.appx文件。
 ```
