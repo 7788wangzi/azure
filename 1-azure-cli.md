@@ -46,4 +46,116 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 **安装在Docker上**
 
+## 在Azure Cloud Shell中使用Azure CLI 
+在Azure Cloud Shell中使用Azure CLI，它在Azure Portal中运行。只需打开https://portal.azure.com并单击顶部工具栏中的Cloud Shell图标。
+![](media/image-25.png)
+
+## 登录Azure账户
+```
+az login
+```
+
+如果在Azure Cloud Shell中使用，则不需要登录。
+
+列出本账户下的所有订阅。
+
+```
+az account list --all
+```
+如果账户下有多个Azure订阅，通过命令切换活动订阅：
+```
+az account set --subscription "Azure Production"
+```
+
+## 格式化输出
+
+在Azure CLI中支持的输出格式：
+
+- json - JSON输出
+- jsonc - 有颜色的JSON输出
+- yaml - YAML格式输出
+- table - 表格格式输出
+- tvs - Tab-seperated 输出
+
+例如，尝试输出Azure实例类型:
+```
+az cloud list
+```
+
+输出结果格式化为表格：
+```
+az cloud list --output table
+```
+![](media/image-29.png)
+
+你也可以通过如下命令修改默认的输出格式:
+```
+az configure
+```
+![](media/image-30.png)
+
+然后选择一个偏好格式。
+
+## 使用Azure CLI可以做什么
+
+您已经使用Azure CLI成功登录到Azure。实际上，可以使用Azure CLI执行通常使用Azure Portal执行的任何操作。
+
+大多数Azure CLI命令遵循相同的az概念。您可以将命令组替换为数十个选项，例如GROUP(适用于资源组)、VM(适用于虚拟机)、WebApp(适用于Web App)等。
+
+要查看所有可用的命令组，只需键入
+```
+az
+``
+### 管理资源组
+
+列出所有资源组
+```
+az group list
+```
+
+创建资源组
+```
+az group create --name  --location 
+```
+
+![](media/image-32.png)
+
+删除资源组
+
+```
+az group delete --resource-group foo --yes --no-wait
+```
+
+--yes 不再提示确认， --no-wait让命令在后台运行
+
+### 使用变量
+
+```
+set variable = value
+az group create --name foo --location $variable
+```
+
+## 使用`find`d命令
+
+有时，您可能不确定将哪个命令用于手头的任务。要搜索命令，请使用：
+
+```
+az find --search-query 
+```
+![](media/image-33.png)
+
+## 使用简写
+有时你会想缩短你的命令。Azure CLI支持很多缩写，您在第一次使用不同的命令时通常会发现这些缩写。例如，以下命令：
+
+```
+az group show --resource-group aci-demo
+```
+
+可以被简写为
+```
+az group show -g aci-demo
+```
+
+
+
 
