@@ -46,8 +46,10 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 **安装在Docker上**
 
-## 在Azure Cloud Shell中使用Azure CLI 
+## 在Azure Cloud Shell中使用Azure CLI    
+
 在Azure Cloud Shell中使用Azure CLI，它在Azure Portal中运行。只需打开https://portal.azure.com并单击顶部工具栏中的Cloud Shell图标。
+
 ![](media/image-25.png)
 
 ## 登录Azure账户
@@ -62,7 +64,9 @@ az login
 ```
 az account list --all
 ```
+
 如果账户下有多个Azure订阅，通过命令切换活动订阅：
+
 ```
 az account set --subscription "Azure Production"
 ```
@@ -78,23 +82,29 @@ az account set --subscription "Azure Production"
 - tvs - Tab-seperated 输出
 
 例如，尝试输出Azure实例类型:
+
 ```
 az cloud list
 ```
 
 输出结果格式化为表格：
+
 ```
 az cloud list --output table
 ```
+
 ![](media/image-29.png)
+
 
 你也可以通过如下命令修改默认的输出格式:
 ```
 az configure
 ```
+
 ![](media/image-30.png)
 
 然后选择一个偏好格式。
+
 
 ## 使用Azure CLI可以做什么
 
@@ -103,9 +113,11 @@ az configure
 大多数Azure CLI命令遵循相同的az概念。您可以将命令组替换为数十个选项，例如GROUP(适用于资源组)、VM(适用于虚拟机)、WebApp(适用于Web App)等。
 
 要查看所有可用的命令组，只需键入
+
 ```
 az
-``
+```
+
 ### 管理资源组
 
 列出所有资源组
@@ -142,6 +154,7 @@ az group create --name foo --location $variable
 ```
 az find --search-query 
 ```
+
 ![](media/image-33.png)
 
 ## 使用简写
