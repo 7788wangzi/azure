@@ -50,3 +50,4 @@ Source Control，选择GitHub。
 测试更新后自动发布，在gitHub中，修改html文件，返回webapp查看更新是否自动被发布。
 
 
+[YT 视频](https://youtu.be/HKXtkydR5tA)
