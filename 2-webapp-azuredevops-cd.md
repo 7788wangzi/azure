@@ -37,3 +37,16 @@ az webapp create -g <resource-group name> -p <app-plan name> -n <webapp name>
 
 ## 在Azure Portal中设置自动化部署方案
 
+登录Azure Portal。
+找到刚刚创建的webapp，在Deployment中选择Deployment Center选项。
+![deployment-center](media/deployment-center.jpg)
+
+Source Control，选择GitHub。
+![github](media/github.jpg)
+
+按照指导进行账号认证，在Configure中配置GitHub的Oragnization, Repository, 和Branch。
+![github configuration](media/github-account-.JPG)
+
+测试更新后自动发布，在gitHub中，修改html文件，返回webapp查看更新是否自动被发布。
+
+
