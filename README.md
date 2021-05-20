@@ -1,4 +1,4 @@
-# azure
+# Azure CLI
 
 Azure CLI命令行基础任务实践。
 
